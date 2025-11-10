@@ -4,6 +4,11 @@
 library(tidyverse)
 
 
+# read .Renviron ---------------------------------------------------------------
+ed <- Sys.getenv("ED_DATA")
+ed <- read.csv(ed)
+
+
 # format -----------------------------------------------------------------------
 ed <- read.csv("data/ed.csv", header = TRUE) %>%
   
